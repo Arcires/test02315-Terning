@@ -29,7 +29,7 @@ public class DiceTest {
 		for(int i = 0; i< 100; i++)
 		{
 			value = dice.roll();
-			if(value < 1 || value > 6)
+			if(value < 1 || value > 8)
 				fail("Terning fik værdi mindre end 1 eller større end 6");
 		}
 	}
@@ -47,9 +47,11 @@ public class DiceTest {
 		int fire = 0;
 		int fem = 0;
 		int seks = 0;
+		int syv = 0;
+		int otte = 0;
 
 		int faceValue = 0;
-		for (int i = 0; i < 60000; i++)
+		for (int i = 0; i < 80000; i++)
 		{
 			faceValue = d3.roll();
 			switch (faceValue)
@@ -64,10 +66,16 @@ public class DiceTest {
 			break; 
 			case(5): fem++; 
 			break;
+			case(6): seks++;
+			break;
+			case(7): syv++;
+			break();
 			default: seks++; 
 			}
 		}
-		
+		//Manger flere parametre!
+		System.out.println(otte);
+		System.out.println(syv);
 		System.out.println(seks);
 		System.out.println(fem);
 		System.out.println(fire);
